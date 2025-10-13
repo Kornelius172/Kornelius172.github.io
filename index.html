@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mein Minimalistisches Portfolio</title>
+    <style>
+        :root {
+            --bg: #181f1a;
+            --fg: #e6f2e7;
+            --accent: #2e7d32;
+            --card-bg: #223127;
+            --border: #35543a;
+        }
+        body {
+            background: var(--bg);
+            color: var(--fg);
+            font-family: system-ui, sans-serif;
+            margin: 0;
+            padding: 0 1rem;
+            line-height: 1.6;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1, h2 {
+            color: var(--accent);
+            margin-top: 2rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: var(--card-bg);
+        }
+        th, td {
+            border: 1px solid var(--border);
+            padding: 0.5rem;
+            text-align: left;
+        }
+        th {
+            background: var(--accent);
+            color: #fff;
+        }
+        figure {
+            margin: 2rem 0 1rem 0;
+            text-align: center;
+        }
+        figcaption {
+            font-size: 0.95em;
+            color: #b2ccb5;
+            margin-top: 0.5rem;
+        }
+        .gallery {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            flex: 1 1 30%;
+            min-width: 220px;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            transition: box-shadow 0.2s;
+        }
+        .card:hover, .card:focus-within {
+            box-shadow: 0 2px 8px rgba(46,125,50,0.15);
+        }
+        .card img {
+            width: 100%;
+            max-width: 120px;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+        .card-title {
+            font-weight: bold;
+            margin: 0.5rem 0 0.25rem 0;
+            color: var(--accent);
+        }
+        .card-text {
+            font-size: 0.97em;
+            color: #b2ccb5;
+            margin-bottom: 0.5rem;
+        }
+        .card a {
+            color: var(--accent);
+            text-decoration: underline;
+            font-weight: 500;
+        }
+        @media (max-width: 720px) {
+            .gallery {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .card {
+                min-width: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kornelius Wolschon</h1>
+        <p>Ich bin Geoinformatiker mit abgeschlossenem Studium und arbeite leidenschaftlich im Bereich Geodaten und Kartografie. Besonders faszinieren mich innovative GIS-Lösungen und die Entwicklung moderner Webmapping-Anwendungen.</p>
+        <p>Karten, räumliche Analysen und die Visualisierung von Geodaten gehören zu meinen beruflichen Schwerpunkten. In meiner Freizeit erkunde ich gerne neue Technologien rund um OpenStreetMap und Web-GIS.</p>
+    </header>
+
+    <section aria-labelledby="cv-heading">
+        <h2 id="cv-heading">Lebenslauf</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Jahr</th>
+                    <th>Station</th>
+                    <th>Ort</th>
+                    <th>Stichwort</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2023 - heute</td>
+                    <td>Studium "Geoinformatik und Vermessung</td>
+                    <td>Mainz</td>
+                    <td>Bachelor</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>Praktikum</td>
+                    <td>Kassel</td>
+                    <td>Vermessungstechnische Tätigkeiten</td>
+                </tr>
+                <tr>
+                    <td>2022 - 2023</td>
+                    <td>Studium "Geschichte"</td>
+                    <td>Leipzig</td>
+                    <td>Bachelor</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <figure>
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Porträtfoto eines 25-jährigen Studenten mit Locken" width="180" height="180" style="border-radius:50%;">
+        <figcaption>Das bin ich, aufgenommen im Jahr 2024.</figcaption>
+    </figure>
+
+    <section aria-labelledby="gallery-heading">
+        <h2 id="gallery-heading">Galerie</h2>
+        <div class="map-gallery" style="display: flex; gap: 1rem; flex-wrap: wrap; margin: 2rem 0;">
+            <div style="flex:1 1 0; min-width:220px;">
+                <div id="map-mainz" style="height: 300px; border-radius: 8px;"></div>
+                <div style="text-align:center; margin-top:0.5rem; color:#b2ccb5;">Mainz</div>
+            </div>
+            <div style="flex:1 1 0; min-width:220px;">
+                <div id="map-kassel" style="height: 300px; border-radius: 8px;"></div>
+                <div style="text-align:center; margin-top:0.5rem; color:#b2ccb5;">Kassel</div>
+            </div>
+            <div style="flex:1 1 0; min-width:220px;">
+                <div id="map-leipzig" style="height: 300px; border-radius: 8px;"></div>
+                <div style="text-align:center; margin-top:0.5rem; color:#b2ccb5;">Leipzig</div>
+            </div>
+        </div>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var maps = [
+                    { id: 'map-mainz', center: [50.001, 8.271], popup: 'Mainz' },
+                    { id: 'map-kassel', center: [51.3127, 9.4797], popup: 'Kassel' },
+                    { id: 'map-leipzig', center: [51.3397, 12.3731], popup: 'Leipzig' }
+                ];
+                maps.forEach(function(m) {
+                    var map = L.map(m.id).setView(m.center, 13);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        maxZoom: 19,
+                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> Mitwirkende'
+                    }).addTo(map);
+                    L.marker(m.center).addTo(map)
+                        .bindPopup(m.popup)
+                        .openPopup();
+                });
+            });
+        </script>
+    </section>
+</body>
+</html>
