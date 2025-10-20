@@ -245,13 +245,15 @@
                 article.style.alignItems = 'flex-start';
 
                 var img = document.createElement('img');
-                img.src = item.image || 'https://via.placeholder.com/120x80?text=Kein+Bild';
+                img.src = item.image || 'https://via.placeholder.com/240x150?text=Kein+Bild';
                 img.alt = item.imageAlt || item.title || 'Newsbild';
-                img.width = 120;
-                img.height = 80;
+                img.width = 240;
+                img.height = 150;
+                img.style.width = '240px';
+                img.style.height = '150px';
                 img.style.objectFit = 'cover';
                 img.style.borderRadius = '6px';
-                img.style.flex = '0 0 auto';
+                img.style.flex = '0 0 240px';
 
                 var meta = document.createElement('div');
                 meta.style.flex = '1';
