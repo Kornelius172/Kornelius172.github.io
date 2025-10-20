@@ -137,6 +137,43 @@
             color: #b2ccb5;
         }
 
+        /* Kontakt-Widget (unten rechts) */
+        .contact-widget {
+            position: fixed;
+            right: 1rem;
+            bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            z-index: 9999;
+        }
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--card-bg);
+            color: var(--fg);
+            border: 1px solid var(--border);
+            padding: 0.45rem 0.7rem;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+            transition: transform 0.12s ease, box-shadow 0.12s ease;
+        }
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+        }
+        .contact-btn:focus {
+            outline: 2px solid rgba(46,125,50,0.25);
+            outline-offset: 3px;
+        }
+        .contact-emoji {
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+
         @media (max-width: 720px) {
             .map-gallery {
                 flex-direction: column;
@@ -146,14 +183,20 @@
                 top: 0.6rem;
                 right: 0.6rem;
             }
+            .contact-widget {
+                right: 0.6rem;
+                bottom: 0.6rem;
+            }
+            .contact-btn {
+                padding: 0.4rem 0.55rem;
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <button id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Design wechseln">🌙 Dunkel</button>
-
-       
 
         <nav class="tabs" role="tablist" aria-label="Hauptbereiche">
             <button class="tab" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true">About-Section</button>
@@ -184,7 +227,7 @@
                         <td>Mainz</td>
                         <td>Bachelor</td>
                     </tr>
-                    <tr>
+                    <tr></tr>
                         <td>2023</td>
                         <td>Praktikum</td>
                         <td>Kassel</td>
@@ -313,6 +356,22 @@
             </script>
         </section>
     </main>
+
+    <!-- Kontakt-Widget: Links bitte selbst einsetzen (href="#") -->
+    <div class="contact-widget" aria-hidden="false">
+        <a class="contact-btn" href="https://www.linkedin.com/in/barackobama" aria-label="LinkedIn" title="LinkedIn-Profil (Link hier einfügen)" target="_blank" rel="noopener noreferrer">
+            <span class="contact-emoji">💼</span>
+            <span>LinkedIn</span>
+        </a>
+        <a class="contact-btn" href="https://github.com/presidentobama" aria-label="GitHub" title="GitHub (Link hier einfügen)" target="_blank" rel="noopener noreferrer">
+            <span class="contact-emoji">🐙</span>
+            <span>GitHub</span>
+        </a>
+        <a class="contact-btn" href="info@obama.org" aria-label="E-Mail" title="E-Mail senden">
+            <span class="contact-emoji">✉️</span>
+            <span>E‑Mail</span>
+        </a>
+    </div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
