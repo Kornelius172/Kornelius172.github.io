@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0b23af4cb94920c92e1aa3890432f284 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_0b23af4cb94920c92e1aa3890432f284" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0b23af4cb94920c92e1aa3890432f284 = L.map(
+                "map_0b23af4cb94920c92e1aa3890432f284",
+                {
+                    center: [40.0, 45.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 3,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e82e05e67c0542437fd4b4941e239b5c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e82e05e67c0542437fd4b4941e239b5c.addTo(map_0b23af4cb94920c92e1aa3890432f284);
+        
+    
+            var tile_layer_4c57700a3ebbb1e9de7156e4b033a920 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4c57700a3ebbb1e9de7156e4b033a920.addTo(map_0b23af4cb94920c92e1aa3890432f284);
+        
+    
+            var marker_8e6c757b1a3b4e7bd3d66d4dae037144 = L.marker(
+                [50.001, 8.271],
+                {
+}
+            ).addTo(map_0b23af4cb94920c92e1aa3890432f284);
+        
+    
+            var icon_16d4d1ca4b4c9f14c8032686aadceacb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8362a3b4a081d64664e31e8d9208c706 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7dcd6aefca343f0e5443968145ca8262 = $(`<div id="html_7dcd6aefca343f0e5443968145ca8262" style="width: 100.0%; height: 100.0%;"><b>Mainz</b><br>Rheinland-Pfalz, DE</div>`)[0];
+                popup_8362a3b4a081d64664e31e8d9208c706.setContent(html_7dcd6aefca343f0e5443968145ca8262);
+            
+        
+
+        marker_8e6c757b1a3b4e7bd3d66d4dae037144.bindPopup(popup_8362a3b4a081d64664e31e8d9208c706)
+        ;
+
+        
+    
+    
+            marker_8e6c757b1a3b4e7bd3d66d4dae037144.bindTooltip(
+                `<div>
+                     Mainz
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8e6c757b1a3b4e7bd3d66d4dae037144.setIcon(icon_16d4d1ca4b4c9f14c8032686aadceacb);
+            
+    
+            var marker_6b67e51ee9ff2d3045b359cfbea93d26 = L.marker(
+                [54.0924, 12.0991],
+                {
+}
+            ).addTo(map_0b23af4cb94920c92e1aa3890432f284);
+        
+    
+            var icon_d1f3b44dc316a91a5fdd93da1194ab57 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1d67bcf244f4557e07a29b460e55d9db = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_602ca021d46fd04160b4d2df888e3216 = $(`<div id="html_602ca021d46fd04160b4d2df888e3216" style="width: 100.0%; height: 100.0%;"><b>Rostock</b><br>Mecklenburg-Vorpommern, DE</div>`)[0];
+                popup_1d67bcf244f4557e07a29b460e55d9db.setContent(html_602ca021d46fd04160b4d2df888e3216);
+            
+        
+
+        marker_6b67e51ee9ff2d3045b359cfbea93d26.bindPopup(popup_1d67bcf244f4557e07a29b460e55d9db)
+        ;
+
+        
+    
+    
+            marker_6b67e51ee9ff2d3045b359cfbea93d26.bindTooltip(
+                `<div>
+                     Rostock
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6b67e51ee9ff2d3045b359cfbea93d26.setIcon(icon_d1f3b44dc316a91a5fdd93da1194ab57);
+            
+    
+            var marker_83991c66edf3c4266c61eccfca74a3fa = L.marker(
+                [51.3397, 12.3731],
+                {
+}
+            ).addTo(map_0b23af4cb94920c92e1aa3890432f284);
+        
+    
+            var icon_294a6ed21de7ef3f5556ada312e8c326 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_21d02a2c78713a6ba62bd02188000da5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d35ef529ef32486109976164b0bb364f = $(`<div id="html_d35ef529ef32486109976164b0bb364f" style="width: 100.0%; height: 100.0%;"><b>Leipzig</b><br>Sachsen, DE</div>`)[0];
+                popup_21d02a2c78713a6ba62bd02188000da5.setContent(html_d35ef529ef32486109976164b0bb364f);
+            
+        
+
+        marker_83991c66edf3c4266c61eccfca74a3fa.bindPopup(popup_21d02a2c78713a6ba62bd02188000da5)
+        ;
+
+        
+    
+    
+            marker_83991c66edf3c4266c61eccfca74a3fa.bindTooltip(
+                `<div>
+                     Leipzig
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_83991c66edf3c4266c61eccfca74a3fa.setIcon(icon_294a6ed21de7ef3f5556ada312e8c326);
+            
+    
+            var marker_cca385e808fc7425822b3aed801a6258 = L.marker(
+                [52.0567, 1.1482],
+                {
+}
+            ).addTo(map_0b23af4cb94920c92e1aa3890432f284);
+        
+    
+            var icon_2ab53ffeeff7356371cfd0d165ba4ced = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_913e39bf622bf9a5d0ceacaa4f5f9932 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_32894d0c21127d00bd97c465f53451ef = $(`<div id="html_32894d0c21127d00bd97c465f53451ef" style="width: 100.0%; height: 100.0%;"><b>Ipswich</b><br>Suffolk, UK</div>`)[0];
+                popup_913e39bf622bf9a5d0ceacaa4f5f9932.setContent(html_32894d0c21127d00bd97c465f53451ef);
+            
+        
+
+        marker_cca385e808fc7425822b3aed801a6258.bindPopup(popup_913e39bf622bf9a5d0ceacaa4f5f9932)
+        ;
+
+        
+    
+    
+            marker_cca385e808fc7425822b3aed801a6258.bindTooltip(
+                `<div>
+                     Ipswich
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cca385e808fc7425822b3aed801a6258.setIcon(icon_2ab53ffeeff7356371cfd0d165ba4ced);
+            
+    
+            map_0b23af4cb94920c92e1aa3890432f284.fitBounds(
+                [[50.001, 8.271], [54.0924, 12.0991], [51.3397, 12.3731], [52.0567, 1.1482]],
+                {"padding": [20, 20]}
+            );
+        
+    
+            var layer_control_036d105ddc18f38814d42fceeb0ebf6d_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_e82e05e67c0542437fd4b4941e239b5c,
+                    "Carto Light" : tile_layer_4c57700a3ebbb1e9de7156e4b033a920,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_036d105ddc18f38814d42fceeb0ebf6d = L.control.layers(
+                layer_control_036d105ddc18f38814d42fceeb0ebf6d_layers.base_layers,
+                layer_control_036d105ddc18f38814d42fceeb0ebf6d_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_0b23af4cb94920c92e1aa3890432f284);
+
+        
+    
+            tile_layer_e82e05e67c0542437fd4b4941e239b5c.addTo(map_0b23af4cb94920c92e1aa3890432f284);
+        
+    
+            tile_layer_4c57700a3ebbb1e9de7156e4b033a920.addTo(map_0b23af4cb94920c92e1aa3890432f284);
+        
+    
+                marker_8e6c757b1a3b4e7bd3d66d4dae037144.setIcon(icon_16d4d1ca4b4c9f14c8032686aadceacb);
+            
+    
+                marker_6b67e51ee9ff2d3045b359cfbea93d26.setIcon(icon_d1f3b44dc316a91a5fdd93da1194ab57);
+            
+    
+                marker_83991c66edf3c4266c61eccfca74a3fa.setIcon(icon_294a6ed21de7ef3f5556ada312e8c326);
+            
+    
+                marker_cca385e808fc7425822b3aed801a6258.setIcon(icon_2ab53ffeeff7356371cfd0d165ba4ced);
+            
+    
+            tile_layer_e82e05e67c0542437fd4b4941e239b5c.addTo(map_0b23af4cb94920c92e1aa3890432f284);
+        
+    
+            tile_layer_4c57700a3ebbb1e9de7156e4b033a920.addTo(map_0b23af4cb94920c92e1aa3890432f284);
+        
+    
+                marker_8e6c757b1a3b4e7bd3d66d4dae037144.setIcon(icon_16d4d1ca4b4c9f14c8032686aadceacb);
+            
+    
+                marker_6b67e51ee9ff2d3045b359cfbea93d26.setIcon(icon_d1f3b44dc316a91a5fdd93da1194ab57);
+            
+    
+                marker_83991c66edf3c4266c61eccfca74a3fa.setIcon(icon_294a6ed21de7ef3f5556ada312e8c326);
+            
+    
+                marker_cca385e808fc7425822b3aed801a6258.setIcon(icon_2ab53ffeeff7356371cfd0d165ba4ced);
+            
+</script>
+</html>
