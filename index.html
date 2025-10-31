@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mein Minimalistisches Portfolio</title>
+    <title>About me</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
         :root {
@@ -253,16 +253,39 @@
 
             <div class="map-gallery" aria-live="polite">
                 <div class="map-card">
-                    <div id="map-mainz" style="height:300px; border-radius:8px;"></div>
-                    <div class="title">Mainz</div>
+                    <iframe
+                        src="map_2_punkte.html"
+                        title="Karte: 2 Punkte"
+                        style="width:100%; height:300px; border:0; border-radius:8px;"
+                        loading="lazy"
+                        sandbox="allow-scripts allow-same-origin"
+                        aria-label="Karte: 2 Punkte">
+                    </iframe>
+                    <div class="title">map_2_punkte.html — 2 Punkte</div>
                 </div>
+
                 <div class="map-card">
-                    <div id="map-kassel" style="height:300px; border-radius:8px;"></div>
-                    <div class="title">Kassel</div>
+                    <iframe
+                        src="map_3_reiseroute.html"
+                        title="Karte: Reiseroute"
+                        style="width:100%; height:300px; border:0; border-radius:8px;"
+                        loading="lazy"
+                        sandbox="allow-scripts allow-same-origin"
+                        aria-label="Karte: Reiseroute">
+                    </iframe>
+                    <div class="title">map_3_reiseroute.html — Reiseroute</div>
                 </div>
+
                 <div class="map-card">
-                    <div id="map-leipzig" style="height:300px; border-radius:8px;"></div>
-                    <div class="title">Leipzig</div>
+                    <iframe
+                        src="map_4_flaechen_online.html"
+                        title="Karte: Flächen (online)"
+                        style="width:100%; height:300px; border:0; border-radius:8px;"
+                        loading="lazy"
+                        sandbox="allow-scripts allow-same-origin"
+                        aria-label="Karte: Flächen (online)">
+                    </iframe>
+                    <div class="title">map_4_flaechen_online.html — Flächen (online)</div>
                 </div>
             </div>
         </section>
